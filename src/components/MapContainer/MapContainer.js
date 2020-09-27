@@ -9,15 +9,15 @@ const MapContainer = ({ lat, lon, google }) => {
 
   return (
     <div className="map">
-      {this.props.lat && this.props.lon && (
+      {lat && lon && (
         <Map
-          google={this.props.google}
+          google={google}
           zoom={10}
           style={mapStyles}
-          center={{ lat: this.props.lat, lng: this.props.lon }}
-          initialCenter={{ lat: this.props.lat, lng: this.props.lon }}
+          center={{ lat: lat, lng: lon }}
+          initialCenter={{ lat: lat, lng: lon }}
         >
-          <Marker position={{ lat: this.props.lat, lng: this.props.lon }} />
+          <Marker position={{ lat: lat, lng: lon }} />
         </Map>
       )}
     </div>
